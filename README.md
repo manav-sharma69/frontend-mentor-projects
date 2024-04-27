@@ -2,5 +2,5 @@
 
 This is the main folder which just contains an HTML file to index all the projects that I've made to complete Frontend Mentor Challenges.
 
-Thanks for visiting!
+Thanks for visiting!_
 Have a nice day ❤️
