@@ -27,7 +27,7 @@ My first Frontend Mentor Project!
 
 ### Links
 
-- Solution URL: [GitHub Repo](https://github.com/manav-sharma69/qr-code-component)
+- Solution URL: [GitHub Repo](https://github.com/manav-sharma69/frontend-mentor-projects/tree/main/qr-code-component)
 - Live Site URL: [GitHub Pages](https://manav-sharma69.github.io/frontend-mentor-projects/qr-code-component/index.html)
 
 ## My process
