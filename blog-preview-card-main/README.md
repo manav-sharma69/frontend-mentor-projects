@@ -32,7 +32,7 @@ Users should be able to:
 ### Links
 
 - Solution URL: [Github link to this project's repo](https://github.com/manav-sharma69/frontend-mentor-projects/tree/main/blog-preview-card-main)
-- Live Site URL: [Add live site URL here](https://your-live-site-url.com)
+- Live Site URL: [Github Pages](https://manav-sharma69.github.io/frontend-mentor-projects/blog-preview-card-main/index.html)
 
 ## My process
 I wrote the HTML markup and then styled it with CSS. 
