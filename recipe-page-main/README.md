@@ -58,4 +58,4 @@ Practice designing webpages in mobile first workflow. Because I was trying to de
 
 ## Acknowledgments
 
-Mr. commented on my last [blog preview card project](https://github.com/manav-sharma69/frontend-mentor-projects/tree/main/blog-preview-card-main) and I learned from him about the `<figure>` tag. That was helpful.
+[Mr. Bernardo Poggioni](https://github.com/R3ygoski) commented on my last [blog preview card project](https://github.com/manav-sharma69/frontend-mentor-projects/tree/main/blog-preview-card-main) and I learned from him about the `<figure>` tag. That was helpful.
