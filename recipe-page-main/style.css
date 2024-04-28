@@ -1,0 +1,182 @@
+/*
+##Colors
+
+### Primary
+
+- Nutmeg: hsl(14, 45%, 36%)
+- Dark Raspberry: hsl(332, 51%, 32%)
+
+### Neutral
+
+- White: hsl(0, 0%, 100%)
+- Rose White: hsl(330, 100%, 98%)
+- Eggshell: hsl(30, 54%, 90%)
+- Light Grey: hsl(30, 18%, 87%)
+- Wenge Brown: hsl(30, 10%, 34%)
+- Dark Charcoal: hsl(24, 5%, 18%)
+
+font size body 16px
+*/
+@font-face {
+    font-family: 'Outfit';
+    src: url(./assets/fonts/outfit/Outfit-VariableFont_wght.ttf);
+}
+
+@font-face {
+    font-family: 'Young Serif';
+    src: url(./assets/fonts/young-serif/YoungSerif-Regular.ttf);
+}
+.attribution { font-size: 11px; text-align: center; }
+.attribution a { color: hsl(228, 45%, 44%); }
+
+body{
+    font-family: 'Outfit';
+    font-weight: 400;
+    margin: 0 auto;
+    /* 20rem (320px) temporary hai, for mobile first, later switch to 40rem (640px) */
+    color: hsl(30, 10%, 34%);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+header{
+    display: flex;
+    flex-direction: column;
+    max-width: 40rem;
+}
+
+hgroup{
+    order: 1;
+}
+
+hgroup, main{
+    padding: 0 1.6em;
+}
+
+h1{
+    font-family: 'Young Serif';
+    line-height: 1;
+    color: hsl(24, 5%, 18%);
+}
+
+hgroup p{
+    letter-spacing: .1px;
+}
+
+figure{
+    margin: 0;
+}
+
+figcaption{
+    opacity: 0;
+    max-height: 2px;
+}
+
+img{
+    width: 100%;
+}
+
+main{
+    max-width: calc(40rem - 3.2em);
+    margin-bottom: 1em;
+}
+
+.container-prep-time{
+    background-color: hsl(330, 100%, 98%);
+    border-radius: 10px;
+    padding: 1em;
+}
+
+.container-prep-time h2{
+    margin: 0;
+    font-size: 18px;
+    font-weight: 600;
+    color: hsl(332, 51%, 32%);
+}
+
+.list-prep-time, .list-ingredients, .list-instructions{
+    padding-left: 1em;
+}
+
+.list-prep-time li, .list-ingredients li, .list-instructions li{
+    margin-bottom: 1em;
+}
+
+.list-prep-time li::marker, .list-ingredients li::marker{
+    font-size: 0.8em;
+}
+
+.list-ingredients li::marker, .list-instructions li::marker{
+    color: hsl(14, 45%, 36%);
+}
+
+span{
+    position: relative;
+    left: 10px;
+}
+
+.container-ingredients, .container-instructions, tr{
+    border-bottom: 1px solid hsl(30, 18%, 87%);
+
+}
+
+.container-ingredients h2, .container-instructions h2, .container-nutrition h2{
+    font-family: 'Young Serif';
+    color: hsl(14, 45%, 36%);
+    font-weight: 400;
+}
+
+table{
+    width: 100%;
+    border-collapse: collapse;
+}
+
+caption{
+    text-align: left;
+    letter-spacing: .1px;
+}
+
+tr{
+    display: flex;
+    padding: 1em 0;
+}
+
+th{
+    font-weight: 400;
+    text-align: left;
+    margin-left: 2.5em;
+    display: inline-block;
+    width: 100%;
+}
+
+td{
+    display: inline-block;
+    width: 100%;
+    font-weight: 600;
+    color: hsl(332, 51%, 32%);
+}
+
+@media (min-width: 425px){
+    body{
+        background-color: hsl(330, 100%, 98%);
+        margin: 6em 1em;
+    }
+    
+    header, main{
+        background-color: white;
+    }
+    
+    header{
+        padding: 1em;
+        border-radius: 10px 10px 0 0;
+        /* border: 2px solid darkcyan; */
+        max-width: calc(40rem - 2em);
+    }
+
+    main{
+        border-radius: 0 0 10px 10px;
+        /* border: 2px solid indianred; */
+    }
+}
