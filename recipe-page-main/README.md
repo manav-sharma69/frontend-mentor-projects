@@ -18,6 +18,8 @@ This is a solution to the [Recipe page challenge on Frontend Mentor](https://www
 
 ## Overview
 
+### The challenge
+
 A responsive page for Simple Omelette Recipe. The webpage should be accessible and responsive.
 
 ### Screenshot
