@@ -1,0 +1,157 @@
+:root{
+    /* font size: 14px; font weight: 400, 600, 700 */
+    --green: hsl(75, 94%, 57%);
+    --white: hsl(0, 0%, 100%);
+    --grey: hsl(0, 0%, 20%);
+    --dark-grey: hsl(0, 0%, 12%);
+    --off-black: hsl(0, 0%, 8%);
+    --p-color: lightgray;
+    --li-color: gainsboro;
+}
+
+@font-face {
+    font-family: 'Inter';
+    src: url(./assets/fonts/Inter-VariableFont_slnt\,wght.ttf);
+}
+
+.attribution { font-size: 11px; text-align: center; }
+.attribution a { color: hsl(228, 45%, 44%); }
+
+/* TYPOGRAPHY */
+body{
+    font-family: Inter;
+}
+
+h1{
+    font-weight: 500;
+}
+
+.address-location{
+    font-style: normal;
+    font-weight: 600;
+}
+
+p, .address-location, li{
+    font-size: 14px;
+}
+
+ul{
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+li{
+    font-style: normal;
+    text-align: center;
+    font-weight: 700;
+}
+
+a{
+    text-decoration: none;
+}
+
+/* COLORS */
+body{
+    background-color: var(--off-black);
+    color: var(--white);
+}
+
+article{
+    background-color: var(--dark-grey);
+    border-radius: calc(5px + .5em);
+}
+
+img{
+    border-radius: 50%;
+}
+
+.address-location{
+    color: var(--green);
+}
+
+p{
+    color: var(--p-color);
+}
+
+li{
+    border-radius: 5px;
+    background-color: var(--grey);
+    color: var(--li-color);
+}
+
+li:hover{
+    background-color: var(--green);
+    color: var(--dark-grey);
+    cursor: pointer;
+}
+
+a{
+    color: inherit;
+}
+
+/* LAYOUT */
+
+body{
+    min-height: 100vh;
+    margin: 0;
+    display: grid;
+    place-items: center;
+}
+
+article{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 1.5em 1em;
+    margin-block-end: 1em;
+    margin-inline: 1em;
+}
+
+img{
+    order: -1;
+    width: 5em;
+    margin-block-end: .5em;
+}
+
+h1{
+    margin-block-end: .5em;
+}
+
+.address-location{
+    margin-block-end: .5em;
+}
+
+p{
+    margin-block-end: 2em;
+}
+
+.address-media-handles{
+    inline-size: 100%;
+}
+
+ul{
+    margin-inline: 2em;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+li{
+    margin-inline: 1em;
+    margin-block-end: 1em;
+    padding: .8em 2em;
+    inline-size: 100%;
+}
+
+li:last-child{
+    margin-block-end: 0;
+}
+
+/* MEDIA QUERY */
+@media (min-width: 520px){
+    article{
+        min-width: 320px;
+    }
+}
