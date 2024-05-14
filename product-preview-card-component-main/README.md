@@ -30,8 +30,8 @@ Users should be able to:
 
 ### Links
 
-- Solution URL: [GitHub Repo](https://github.com/manav-sharma69/frontend-mentor-projects/tree/main/product-review-card-component-main)
-- Live Site URL: [GitHub Pages](https://manav-sharma69.github.io/frontend-mentor-projects/product-review-card-component-main/index.html)
+- Solution URL: [GitHub Repo](https://github.com/manav-sharma69/frontend-mentor-projects/tree/main/product-preview-card-component-main)
+- Live Site URL: [GitHub Pages](https://manav-sharma69.github.io/frontend-mentor-projects/product-preview-card-component-main/index.html)
 
 ## My process
 Process was researching the web and writing appropriate code.
