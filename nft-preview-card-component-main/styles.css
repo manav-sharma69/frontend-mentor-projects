@@ -1,0 +1,172 @@
+/* COLORS / THEMEING */
+:root{
+    /* Primary */
+    --soft-blue: hsl(215, 51%, 70%);
+    --cyan: hsl(178, 100%, 50%);
+    --cyan-img-overlay: hsla(178, 100%, 50%, 0.379);
+
+    /* Neutral */
+    --very-dark-blue-main-bg: hsl(217, 54%, 11%);
+    --very-dark-blue-card-bg: hsl(216, 50%, 16%);
+    --very-dark-blue-line: hsl(215, 32%, 27%);
+    --white: hsl(0, 0%, 100%);
+}
+
+body{
+    background-color: var(--very-dark-blue-main-bg);
+    color: var(--soft-blue);
+}
+
+figure{
+    background-color: var(--very-dark-blue-card-bg);
+    border-radius: 20px;
+    box-shadow: 0px 40px 4px 16px rgba(0,0,0, 0.1);
+}
+
+img{
+    border-radius: 12px;
+}
+
+.view-nft{
+    background-color: var(--cyan-img-overlay);
+}
+
+hr{
+    border: 1px solid var(--very-dark-blue-line);
+}
+
+img[alt="Jules Wyvern Avatar"]{
+    border: 1px solid var(--white);
+    border-radius: 50%;
+}
+
+.attribution a { color: hsl(228, 45%, 44%); }
+
+/* TYPOGRAPHY p - 18px */
+
+body{
+    font-family: Outfit;
+}
+
+figcaption{
+    font-size: 1.35rem;
+    font-weight: 600;
+}
+
+a{
+    color: var(--white);
+    text-decoration: none;
+}
+
+p{
+    font-size: 18px;
+    line-height: 1.5;
+    font-weight: 300;
+}
+
+li:first-of-type, a:active{
+    color: var(--cyan);
+}
+
+.attribution { font-size: 11px; text-align: center; }
+
+/* LAYOUT */
+
+body{
+    display: grid;
+    place-items: center;
+    margin: 0;
+    min-block-size: 100vh;
+}
+
+figure{
+    display: flex;
+    flex-direction: column;
+    margin: 1rem;
+    padding: 1.25rem;
+}
+
+figure > * {
+    margin: 0;
+    margin-block-end: 1rem;
+}
+
+.img-container{
+    position: relative;
+}
+
+img{
+    display: block;
+  object-fit: cover;
+    inline-size: 100%;
+}
+
+.view-nft{
+    position: absolute; 
+    background: var(--cyan-img-overlay);
+    inset: 0;
+    border-radius: 12px;
+    display: none;
+}
+
+.view-icon{
+    max-inline-size: 3rem;
+}
+
+ul{
+    padding: 0;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    list-style: none;
+}
+
+li{
+    display: flex;
+    gap: .5rem;
+}
+
+li:first-of-type::before{
+    content: url('./images/icon-ethereum.svg');
+}
+
+li:last-of-type::before{
+    content: url('./images/icon-clock.svg');
+}
+
+footer{
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    margin: 0;
+}
+
+.profile-pic{
+    max-inline-size: 2rem;
+}
+
+/* MEDIA QUERIES */
+
+@media (min-width: 375px){
+    figure{
+        max-inline-size: calc(21.45rem - 2.5rem);
+    }
+}
+
+@media (min-width: 786px){
+    figure{
+        box-shadow: 0px 40px 4px 16px rgba(0,0,0, 0.1),0px 18px 0px 43px rgba(12, 23, 40, .8);
+    }
+}
+
+@media (any-pointer: fine){
+    a:hover{
+        color: var(--cyan);
+    }
+
+    .img-container:hover .view-nft{
+        display: grid;
+        place-items: center;
+        cursor: pointer;
+    }
+}
