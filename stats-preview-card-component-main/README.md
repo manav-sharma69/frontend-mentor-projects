@@ -47,12 +47,13 @@ Process was researching the web and writing appropriate code.
 
 Learned about UI styling.
 
-### Continued development
+### Continued development *(although this project is not well-made, something is better than nothing)*
 
 Need to practice:
-- making responsive images
-- advanced flex box properties
-- (maybe) migrate from flexbox to grid for a while 
+- working responsive images
+- writing less CSS
+- working with typography (it's actually harder than I anticipated)
+- practice using CSS Grids
 
 ### Useful Resources
 
