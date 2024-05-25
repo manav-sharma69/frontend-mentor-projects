@@ -61,7 +61,6 @@ Learn how to keep shapes responsive. (Struggled with keeping circles from turnin
 ### Useful resources
 
 - [How to Change Label when Radio Button Checked in Tailwind CSS ?](https://www.geeksforgeeks.org/how-to-change-label-when-radio-button-checked-in-tailwind-css/) - The solution uses CSS3 and not Tailwind. This finally helped me to set styling on `<label>` when `<input>` was checked (although I initially wanted do something else - next link).
-- [`:checked` pseudo class does not style sibling `<span>` element if input is nested inside the label](https://stackoverflow.com/q/78496841/22045800) - The `:checked` pseudo class behaves wierdly (or maybe it's the `~` sibling selector).
 - [appearance (MDN)](https://developer.mozilla.org/en-US/docs/Web/CSS/appearance) - Use this property to hide input element from visibility but not from the accessibility tree.
 
 ## Author
