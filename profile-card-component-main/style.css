@@ -1,0 +1,161 @@
+/* COLORS / THEMEING */
+:root{
+    /* Primary */
+    --dark-cyan: hsl(185, 75%, 39%);
+    --very-dark-desaturated-blue: hsl(229, 23%, 23%);
+    --dark-grayish-blue: hsl(227, 10%, 46%);
+
+    /* Neutral */
+    --dark-gray: hsla(0, 0%, 59%, 0.454);
+}
+
+body{
+    background-color: var(--dark-cyan);
+    background-image: url('./images/bg-pattern-top.svg'), url('./images/bg-pattern-bottom.svg');
+    background-repeat: no-repeat;
+    background-position: right 50vw bottom 50vh, left 50vw top 50vh;
+}
+
+article{
+    color: var(--dark-grayish-blue);
+    background-color: white;
+    border-radius: 20px;
+}
+
+.container-img{
+    background-image: url('./images/bg-pattern-card.svg');
+    border-radius: 20px 20px 0 0;
+}
+
+img{
+    border-radius: 50%;
+    border: 6px solid white;
+}
+
+ul{
+    border-top: .1px solid var(--dark-gray);
+}
+
+.name, .metric{
+    color: var(--very-dark-desaturated-blue);
+}
+
+.attribution a { color: hsl(228, 45%, 44%); }
+
+/* TYPOGRAPHY */
+
+body{
+    font-family: 'Kumbh Sans';
+    font-size: 11px;
+    font-weight: 400;
+}
+
+.name, .metric{
+    font-size: 18px;
+    font-weight: 700;
+}
+
+.age{
+    font-size: 18px;
+    font-weight: 400;
+}
+
+p{
+    font-size: 14px;
+}
+
+.metric{
+    letter-spacing: 1.05px;
+}
+
+.metric-label{
+    letter-spacing: 1.25px;
+}
+
+.attribution { font-size: 11px; text-align: center; }
+
+/* LAYOUT */
+
+body{
+    display: grid;
+    place-items: center;
+    min-block-size: 100vh;
+    margin: 0;
+}
+
+main{
+    inline-size: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+article{
+    margin: 1.5rem;
+    block-size: 25rem;
+    inline-size: 100%;
+    max-inline-size: 20.5rem;
+    display: grid;
+    grid-template-rows: .35fr .65fr;
+}
+
+.container-img{
+    display: grid;
+    place-items: center;
+    position: relative;
+}
+
+img{
+    position: absolute;
+    top: 5.5rem;
+}
+
+.container-content{
+    margin-block-start: 3.75rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+header{
+    text-align: center;
+}
+
+.wrapper{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: .5rem;
+    margin-block: 1rem .75rem;
+}
+
+h1, p{
+    margin: 0;
+}
+
+header > p{
+    margin-block-end: 1rem;
+}
+
+ul{
+    margin: 0;
+    padding: 2rem 0;
+    list-style: none;
+    display: flex;
+    justify-content: space-evenly;
+    inline-size: 100%;
+}
+
+li{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+/* MEDIA QUERIES */
+
+@media(min-width: 768px){
+    article{
+        max-inline-size: 22rem;
+    }
+}
