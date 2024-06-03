@@ -1,0 +1,267 @@
+/* RESET CSS */
+html, body, div, span, h1, p, a, img, ul, li, article, aside, figure, time {
+	margin: 0;
+	padding: 0;
+	border: 0;
+    font-weight: 500;
+	vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, figure {
+	display: block;
+}
+body {
+	line-height: 1;
+}
+ul {
+	list-style: none;
+}
+
+/* COLORS / THEMEING */
+:root{
+    --very-dark-grayish-blue: hsl(217, 19%, 35%);
+    --desaturated-dark-blue: hsl(214, 17%, 51%);
+    --grayish-blue: hsl(212, 23%, 69%);
+    --light-grayish-blue: hsl(210, 46%, 95%);
+}
+
+body{
+    background-color: var(--light-grayish-blue);
+}
+
+figure{
+    background-color: white;
+    border-radius: 10px;
+}
+
+.decorative{
+    border-radius: 10px 10px 0 0;
+}
+
+h1, .author{
+    color: var(--very-dark-grayish-blue);
+}
+
+p{
+    color: var(--desaturated-dark-blue);
+}
+
+time{
+    color: var(--grayish-blue);
+}
+
+.container-author{
+    border-radius: 0 0 10px 10px;
+}
+
+.share-view{
+    background-color: var(--very-dark-grayish-blue);
+}
+
+.wrapper > img, button{
+    border: none;
+    outline: none;
+    border-radius: 50%;
+}
+
+.share-label{
+    color: var(--grayish-blue);
+}
+
+button{
+    background-color: var(--light-grayish-blue);
+    color: #6E8098;
+}
+
+.btn-selected{
+    background-color: var(--desaturated-dark-blue);
+    color: white;
+}
+
+.attribution a { color: hsl(228, 45%, 44%); }
+
+/* TYPOGRAPHY fs - 13px | wghts 500, 700 */
+html{
+    font-size: 13px;
+    font-family: Manrope;
+}
+
+h1{
+    font-size: 1.25rem;
+}
+
+h1, .author{
+    font-weight: 700;
+}
+
+h1, p{
+    line-height: 1.5;
+}
+
+.share-label{
+    letter-spacing: 6.25px;
+}
+
+.attribution { font-size: 11px; text-align: center; }
+
+/* LAYOUT */
+:root{
+    --btnStyle: none;
+}
+body{
+    display: grid;
+    place-items: center;
+    min-block-size: 100vh;
+}
+
+figure{
+    max-inline-size: calc(375px - 4rem);
+    margin: auto 2rem 1rem;
+}
+
+img{
+    inline-size: 100%;
+}
+
+.decorative{
+    margin-block-end: 1rem;
+    max-block-size: 30vh;
+    object-fit: cover;
+    object-position: 0% 25%;
+}
+
+.container-content, .container-author{
+    padding: 1.5rem 2.6rem;
+}
+
+h1{
+    margin-block-end: 1.25rem;
+}
+
+.container-author, .wrapper, .share-icons, button{
+    display: flex;
+    align-items: center;
+}
+
+.container-author{
+    justify-content: space-between;
+}
+
+.share-view{
+    min-block-size: 5.75vh;
+}
+
+.wrapper > img{
+    inline-size: 17%;
+}
+
+.wrapper{
+    gap: 1.7rem;
+}
+
+.author{
+    margin-block-end: .5rem;
+}
+
+.hidden{
+    display: none;
+}
+
+.share-icons{
+    gap: 1.5rem;
+}
+
+button{
+    padding-block: .5rem;
+}
+
+/* MEDIA QUERIES */
+@media (max-width: 375px) {
+    figure{
+        margin: 0 1rem 1rem;
+    }
+    .container-content, .container-author{
+        padding: 1.5rem 2rem;
+    }
+}
+
+@media (min-width: 769px){
+    figure{
+        max-inline-size: 731px;
+        display: flex;
+    }
+
+    .decorative{
+        border-radius: 10px 0 0 10px;
+        max-block-size: none;
+        max-inline-size: 39%;
+        margin: 0 1rem 0 0;
+    }
+
+    .container-content, .container-author{
+        padding: 2rem 2rem;
+    }
+
+    .container-content{
+        padding-block-end: 0;
+    }
+
+    h1{
+        font-size: 1.5rem;
+    }
+
+    .container-author{
+        padding-block-start: 1rem;
+        position: relative;
+    }
+
+    .popup{
+        justify-content: center;
+        position: absolute;
+        bottom: 90%;
+        right: -2vw;
+        left: 23vw;
+        background-color: var(--very-dark-grayish-blue);
+        padding: 1.25rem 2.5rem;
+        border-radius: 10px;
+    }
+
+    .icon:hover{
+        cursor: pointer;
+    }
+
+    button::before{
+        display: var(--btnStyle);
+        position: absolute;
+        bottom: 80%;
+        right: 7%;
+        content: "";
+        inline-size: 0;
+        block-size: 0;
+        border-top: 10px solid var(--very-dark-grayish-blue);
+        border-inline: 10px solid transparent;
+    }
+
+    .popup > .share-label{
+        letter-spacing: 4px;
+    }
+}
+
+@media (min-width: 920px){
+    .popup{
+        right: -4vw;
+    }
+}
+
+@media (min-width: 1040px){
+    .popup{
+        right: -6vw;
+    }
+}
+
+@media (min-width: 1080px){
+    .popup{
+        right: -20%;
+        left: unset;
+    }
+}
