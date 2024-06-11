@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
+    
+    <!-- GOOGLE FONT -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Josefin+Sans:ital,wght@0,100..700;1,100..700&display=swap" rel="stylesheet">
+
+    <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+    <link rel="stylesheet" href="style.css">
+    
+    <title>Frontend Mentor | Base Apparel coming soon page</title>
+</head>
+<body>
+    <div class="container-generic">
+        <div class="container-grid">
+            <header>
+                <img src="./images/logo.svg" alt="Base Apparel Logo" class="logo">
+            </header>
+            <div class="container-img-decorative">
+                <picture>
+                    <source srcset="./images/hero-desktop.jpg" media="(min-width: 900px)">
+                    <img src="./images/hero-mobile.jpg" alt="" class="decorative">
+                </picture>
+            </div>
+            <main>
+                <h1>
+                    <span class="text-normal">We're</span>
+                    <span class="text-bold">coming soon</span>
+                </h1>
+                <p>
+                    Hello fellow shoppers! We're currently building our new fashion store. Add your email below to stay up-to-date with announcements and our launch deals.
+                </p>
+                <form novalidate>
+                    <div class="wrapper">
+                        <label for="email" class="screen-reader">Email</label>
+                        <input type="email" name="email" id="email" placeholder="Email Address">
+                        <div class="container-img-error hidden">
+                            <img src="./images/icon-error.svg" alt="" class="img-error">
+                        </div>
+                        <button>
+                            <div class="container-img-btn-icon">
+                                <img src="./images/icon-arrow.svg" alt="" class="submit-btn-icon">
+                            </div>
+                            <div class="screen-reader">Submit</div>
+                        </button>
+                    </div>
+                    <p class="error-msg hidden" aria-hidden="true">Please provide a valid email</p>
+                </form>
+            </main>
+        </div>
+        <footer>
+            <p class="attribution">
+            Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
+            Coded by <a href="https://www.frontendmentor.io/profile/manav-sharma69">Manav</a>.
+            </p>
+        </footer>
+    </div>
+
+    <script src="app.js"></script>
+</body>
+</html>
