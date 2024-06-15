@@ -194,7 +194,7 @@ h1{
     padding: 24px;
 }
 
-form > *, .error{
+form > *{
     margin-block-end: 15.5px;
 }
 
