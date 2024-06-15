@@ -36,3 +36,14 @@ form.addEventListener('submit', (e) => {
     }
   })
 })
+
+allInputs.forEach(input => {
+  const label = input.parentElement;
+  const errorBox = label.lastElementChild;
+  const errorImg = errorBox.previousElementSibling;
+  input.addEventListener('focus', (e) => {
+    input.classList.remove('mis-input');
+    errorImg.classList.add('hidden');
+    errorBox.textContent = '';
+  })
+})
