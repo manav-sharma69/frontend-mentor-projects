@@ -1,0 +1,257 @@
+/* RESET */
+*, *::before, *::after {
+    box-sizing: border-box;
+}
+* {
+    margin: 0;
+}
+body {
+    line-height: 1.5;
+    -webkit-font-smoothing: antialiased;
+}
+img, picture, video, canvas, svg {
+    display: block;
+    max-width: 100%;
+}
+input, button, textarea, select {
+    font: inherit;
+}
+p, h1, h2, h3, h4, h5, h6 {
+    overflow-wrap: break-word;
+}
+/* COLORS / THEMING */
+:root{
+    --violet: hsl(257, 40%, 49%);
+    --soft-magenta: hsl(300, 69%, 71%);
+}
+
+body{
+    background: url("./images/bg-mobile.svg") var(--violet) no-repeat;
+    background-size: contain;
+    color: white;
+}
+
+button{
+    background-color: white;
+    color: var(--violet);
+    border: none;
+    border-radius: 50px;
+}
+
+li{
+    border: 1px solid white;
+    border-radius: 50%;
+}
+
+svg{
+    color: white;
+}
+
+.attribution a { color: hsl(228, 100%, 88%); }
+
+/* TYPOGRAPHY | OS 400 | Popp 400, 600 */
+html{
+    font-family: 'Open Sans';
+    text-align: center;
+}
+
+h1{
+    font-family: Poppins;
+    font-size: 1.5rem;
+    font-weight: 600;
+}
+
+button{
+    font-family: Poppins;
+    font-size: .8rem;
+    box-shadow: 3px 3px 5px 2px rgb(49, 49, 49);
+}
+
+.attribution { font-size: 11px; text-align: center; }
+
+/* LAYOUT */
+html, body{
+    block-size: 100%;
+}
+
+body{
+    padding: 36px;
+}
+
+.generic-wrapper{
+    max-inline-size: 400px;
+    margin-inline: auto;
+}
+
+header, main, .img-container{
+    margin-block-end: 58px;
+}
+
+header{
+    display: flex;
+    justify-content: start;
+}
+
+img.logo{
+    inline-size: 40%;
+}
+
+main{
+    display: grid;
+}
+
+.img-container{
+    order: -1;
+}
+
+h1{
+    margin-block-end: 18px;
+}
+
+main p{
+    margin-block-end: 20px;
+}
+
+button{
+    inline-size: 64%;
+    padding-block: 10px;
+}
+
+ul{
+    padding: 0;
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    gap: 12px;
+    margin-block-end: 8px;
+}
+
+li{
+    padding: 6px;
+}
+
+.visually-hidden{
+    clip: rect(0 0 0 0);
+    clip-path: inset(50%);
+    block-size: 1px;
+    overflow: hidden;
+    position: absolute;
+    white-space: nowrap;
+    inline-size: 1px;
+}
+
+svg{
+    min-inline-size: 16px;
+}
+
+/* MEDIA QUERIES */
+
+@media (max-width: 375px){
+    body{
+        padding: 12px;
+    }
+}
+
+@media (min-width: 540px){
+    .generic-wrapper{
+        max-inline-size: 500px;
+        inline-size: 75vw;
+    }
+}
+
+@media (min-width: 900px){
+    html{
+        text-align: start;
+        scrollbar-width: thin;
+    }
+
+    body{
+        background: url("./images/bg-desktop.svg") var(--violet) no-repeat;
+        display: grid;
+        place-items: center;
+    }
+
+    .generic-wrapper{
+        max-inline-size: none;
+        inline-size: unset;
+        margin: 0;
+    }
+
+    header{
+        inline-size: 100%;
+    }
+
+    img.logo{
+        inline-size: 16%;
+    }
+
+    main{
+        grid-template-columns: 1.4fr 1fr;
+        grid-template-rows: 1fr min-content 1fr;
+        column-gap: 32px;
+        margin-block-end: 16px;
+    }
+
+    h1{
+        align-self: end;
+        font-size: clamp(1.75rem, 3vw, 2.5rem);
+    }
+
+    .img-container{
+        grid-row: 1 / 4;
+        max-inline-size: 50vw;
+        margin: 0;
+    }
+
+    form{
+        align-self: start;
+    }
+
+    button{
+        inline-size: 16vw;
+        max-inline-size: 175px;
+        font-size: 1rem;
+        padding-block: 16px;
+    }
+
+    footer{
+        display: flex;
+        flex-direction: column;
+        align-items: end;
+    }
+
+    ul, footer > p{
+        width: fit-content;
+    }
+
+    li{
+        padding: 8px;
+    }
+
+    svg{
+        inline-size: 20px;
+    }
+}
+
+@media (min-width: 1100px){
+    body{
+        padding-inline: 72px;
+        padding-block: 56px 0px;
+        font-size: 1.1rem;
+        place-items: unset;
+    }
+}
+
+@media (any-pointer: fine){
+    button:hover{
+        background-color: var(--soft-magenta);
+        cursor: pointer;
+        color: white;
+    }
+
+    li:hover, li:hover svg{
+        border-color: var(--soft-magenta);
+        color: var(--soft-magenta);
+        cursor: pointer;
+    }
+}
