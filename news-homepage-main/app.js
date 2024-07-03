@@ -6,6 +6,7 @@ const interactiveElementsOutsideNavWrapper = [document.querySelector('a.read-mor
 
 if(window.innerWidth > '900'){
     navWrapper.removeAttribute('inert')
+    navWrapper.removeAttribute('aria-hidden')
 }
 
 function showNav(){
