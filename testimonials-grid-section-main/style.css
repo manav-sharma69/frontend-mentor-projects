@@ -1,0 +1,227 @@
+/* RESET */
+*, *::before, *::after {
+	box-sizing: border-box;
+}
+* {
+	margin: 0;
+}
+body {
+	line-height: 1.5;
+	-webkit-font-smoothing: antialiased;
+}
+img, picture, video, canvas, svg {
+	display: block;
+	max-width: 100%;
+}
+input, button, textarea, select {
+	font: inherit;
+}
+p, h1, h2, h3, h4, h5, h6 {
+	overflow-wrap: break-word;
+}
+
+/* COLORS / THEMEING */
+:root{
+    /* 
+    "Verified Graduate" has the same color as the person's name with 50% opacity
+    Review paragraphs inside the quotations have the same color as well, but are at 70% opacity
+    */
+    /* Primary */
+    --moderate-violet: hsl(263, 55%, 52%);
+    --very-dark-grayish-blue: hsl(217, 19%, 35%);
+    --very-dark-grayish-blue-association: hsl(217, 19%, 70%);
+    --very-dark-grayish-blue-para: hsl(217, 19%, 60%);
+    --very-dark-blackish-blue: hsl(217, 30%, 14%);
+    --white: hsl(0, 0%, 100%);
+    --white-association: hsl(0, 0%, 70%);
+    --white-para: hsl(0, 0%, 65%);
+    
+    /* Neutral */
+    --light-gray: hsl(0, 0%, 81%);
+    --light-grayish-blue: hsl(210, 46%, 95%);
+}
+
+body{
+    background-color: var(--light-grayish-blue);
+}
+
+article{
+    border-radius: 10px;
+    color: var(--white);
+    .association{
+        color: var(--white-association);
+    }
+    .content{
+        color: var(--white-para);
+    }
+}
+
+.violet{
+    background: url("./images/bg-pattern-quotation.svg") no-repeat;
+    background-position: 90% 0%;
+    background-color: var(--moderate-violet);
+    .auth-img-container{
+        border: 2px solid var(--light-gray);
+    }
+}
+
+.dark-grayish-blue{
+    background-color: var(--very-dark-grayish-blue);
+    .auth-img-container{
+        border: 2px solid var(--light-gray);
+    }
+}
+
+.dark-blackish-blue{
+    background-color: var(--very-dark-blackish-blue);
+    .auth-img-container{
+        border: 2px solid var(--moderate-violet);
+    }
+}
+
+.white{
+    background-color: var(--white);
+    color: var(--very-dark-grayish-blue);
+    .auth-img-container{
+        border: 2px solid var(--white);
+    }
+    .association{
+        color: var(--very-dark-grayish-blue-association);
+    }
+    .content{
+        color: var(--very-dark-grayish-blue-para);
+    }
+}
+
+.auth-img-container, img{
+    border-radius: 50%;
+}
+
+.attribution a { color: hsl(228, 45%, 44%); }
+
+/* TYPOGRAPHY | wght - 500, 600 | size 13px */
+
+body{
+    font-family: 'Barlow Semi Condensed';
+    font-size: 0.85rem;
+    font-weight: 300;
+}
+
+h1{
+    font-weight: 600;
+    line-height: normal;
+}
+
+cite{
+    font-style: normal;
+}
+.attribution { font-size: 11px; text-align: center; }
+
+/* LAYOUT */
+main{
+    padding: 64px 20px 24px;
+    display: grid;
+    place-items: center;
+    gap: 16px;
+}
+
+article{
+    max-inline-size: 370px;
+    display: grid;
+    padding: 32px;
+    gap: 16px;
+    .author-container{
+        order: 0;
+        display: flex;
+        align-items: center;
+        .credentials{
+            margin-inline-start: 16px;
+        }
+    }
+    h1{
+        order: 1;
+    }
+    blockquote{
+        order: 2;
+    }
+}
+
+.auth-img-container{
+    inline-size: 36px;
+}
+
+/* MEDIA QUERIES */
+@media (min-width: 560px){
+    main{
+        gap: 24px;
+    }
+    article{
+        max-inline-size: 70vw;
+    }
+}
+
+@media (min-width: 900px){
+    main{
+        inline-size: fit-content;
+        margin-inline: auto;
+        grid-template-columns: repeat(3, minmax(100px, 280px));
+        grid-template-rows: repeat(3, 1fr);
+        grid-template-areas: 
+            "one one two"
+            "three four four"
+            "five five five"
+        ;
+        align-items: start;
+        padding-inline: 48px;
+    }
+
+    article{
+        max-inline-size: none;
+    }
+
+    .one{
+        grid-area: one;
+    }
+
+    .two{
+        grid-area: two;
+    }
+
+    .three{
+        grid-area: three;
+        max-inline-size: 98%;
+        justify-self: left;
+    }
+
+    .four{
+        grid-area: four;
+    }
+
+    .five{
+        grid-area: five;
+        inline-size: 100%;
+    }
+
+    .five, .four, .three{
+        block-size: 100%;
+    }
+}
+
+@media (min-width: 1200px){
+    main{
+        grid-template-rows: repeat(2, 1fr);
+        grid-template-columns: repeat(4, minmax(100px, 280px));
+        grid-template-areas: 
+            "one one two five"
+            "three four four five"
+        ;
+    }
+
+    article{
+        max-inline-size: 70vw;
+    }
+
+    /* .five{
+        inline-size: unset;
+    } */
+}
