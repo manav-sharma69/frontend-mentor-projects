@@ -1,0 +1,361 @@
+/* RESET */
+*, *::before, *::after {
+    box-sizing: border-box;
+}
+* {
+    margin: 0;
+}
+html, body{
+    block-size: 100%;
+}
+body {
+    line-height: 1.5;
+    -webkit-font-smoothing: antialiased;
+}
+img, picture, video, canvas, svg {
+    display: block;
+    max-width: 100%;
+}
+input, button, textarea, select {
+    font: inherit;
+}
+p, h1, h2, h3, h4, h5, h6 {
+    overflow-wrap: break-word;
+}
+
+/* COLORS / THEMEING */
+:root{
+    /* Primary */
+    --green-200: hsl(148, 38%, 91%);
+    --green-600: hsl(169, 82%, 27%);
+    --green-900: hsl(171, 83%, 14%);
+    --red: hsl(0, 66%, 54%);
+
+    /* Neutral */
+    --white: hsl(0, 0%, 100%);
+    --grey-500: hsl(186, 15%, 59%);
+    --grey-900: hsl(187, 24%, 22%);
+}
+
+body{
+    background-color: var(--green-200);
+}
+
+main{
+    background-color: white;
+    color: var(--grey-900);
+    border-radius: 15px;
+}
+
+.error{
+    color: var(--red);
+}
+
+.required-asterisk{
+    color: var(--green-600);
+}
+
+.box-style{
+    border-radius: 8px;
+    border: 1.6px solid var(--grey-500);
+}
+
+fieldset{
+    border: none;
+}
+
+input[type="radio"]{
+    border: 2px solid var(--grey-500);
+    border-radius: 50%;
+}
+
+input[type="radio"]:checked{
+    background-color: var(--green-600);
+    background-clip: content-box;
+    border-color: var(--green-600);
+}
+
+input[type="checkbox"]{
+    border: 2px solid var(--grey-500);
+    border-radius: 0;
+}
+
+input[type="checkbox"]:checked{
+    content: url("./assets/images/icon-checkbox-check.svg");
+    border: none;
+}
+
+input:focus, div.box-style:has(input[type="radio"]:checked), textarea:focus{
+    border: 1.5px solid var(--green-600);
+    outline: .1px solid var(--green-600);
+}
+
+div.box-style:has(input[type="radio"]:checked){
+    background-color: var(--green-200);
+}
+
+button{
+    background-color: var(--green-600);
+    color: var(--white);
+    border: none;
+    border-radius: 10px;
+}
+
+.heading{
+    color: var(--white);
+}
+
+.heading::before{
+    color: var(--white);
+}
+
+.attribution a { color: hsl(228, 45%, 44%); }
+
+/* TYPOGRAPHY | 400, 700*/
+@font-face {
+    font-family: 'Karla';
+    src: url("./assets/fonts/Karla-VariableFont_wght.ttf");
+}
+
+html{
+    font-family: 'Karla', sans-serif;
+}
+
+.error{
+    font-size: 15px;
+}
+
+h1{
+    font-size: clamp(1.75rem, 7.5vw, 2rem);
+}
+
+.flash-msg > .heading{
+    font-size: 1rem;
+    font-weight: 700;
+}
+
+.flash-msg > p{
+    font-size: .8rem;
+}
+
+.attribution { font-size: 11px; text-align: center; }
+
+/* LAYOUT */
+.visually-hidden, .error-screen-reader{
+    clip: rect(0 0 0 0);
+    clip-path: inset(50%);
+    height: 1px;
+    overflow: hidden;
+    position: absolute;
+    white-space: nowrap;
+    width: 1px;
+}
+
+body{
+    padding: 32px 16px;
+}
+
+main{
+    padding: 20px;
+}
+
+main, footer{
+    margin-block-end: 16px;
+}
+
+h1, .input-wrapper{
+    margin-block-end: 20px;
+}
+
+.error{
+    display: block;
+    margin-block-start: 4px;
+}
+
+label:not(.error-screen-reader){
+    display: block;
+    margin-block-end: 4px;
+}
+
+.box-style > label{
+    display: initial;
+}
+
+input, textarea, button{
+    inline-size: 100%;
+}
+
+input, textarea{
+    padding: 8px 12px;
+}
+
+fieldset{
+    margin: 0;
+    padding: 0;
+}
+
+legend{
+    padding: 0;
+    margin-block-end: 12px;
+}
+
+.desktop-view-wrapper .box-style{
+    padding: 12px;
+    padding-inline-start: 24px;
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+.desktop-view-wrapper .box-style:first-of-type{
+    margin-block-end: 12px;
+}
+
+input[type="radio"]{
+    appearance: none;
+    min-inline-size: 16px;
+    min-block-size: 16px;
+    padding: 1.5px;
+}
+
+.tall{
+    block-size: 40vh;
+}
+
+textarea{
+    display: block;
+    resize: none;
+    block-size: 85%;
+}
+
+.flex-wrapper{
+    display: flex;
+    gap: 12px;
+    align-items: center;
+}
+
+.flex-wrapper > input, input[type="radio"]{
+    inline-size: min-content;
+}
+
+input[type="checkbox"]{
+    appearance: none;
+    min-block-size: 18px;
+    min-inline-size: 18px;
+    padding: 0;
+}
+
+button{
+    padding: 12px;
+}
+
+.flash-msg{
+    display: none;
+    inline-size: fit-content;
+    position: absolute;
+    top: 3vh;
+    left: 0;
+    right: 0;
+    margin-inline: auto;
+    padding: 16px;
+
+    color: var(--green-200);
+    background-color: var(--grey-900);
+    border-radius: 10px;
+}
+
+.heading{
+    display: flex;
+    align-items: center;
+    margin-block-end: 6px;
+}
+
+.heading::before{
+    /* content: url("./assets/images/icon-success-check.svg"); */
+    content: '';
+    background-image: url("./assets/images/icon-success-check.svg");
+    min-inline-size: 20px;
+    min-block-size: 22px;
+    margin-inline-end: 8px;
+    display: flex;
+    align-items: center;
+}
+
+.display-flash-msg{
+    display: block;
+}
+
+/* MEDIA QUERIES */
+@media(min-width: 480px){
+    main{
+        max-inline-size: 450px;
+        margin-inline: auto;
+    }
+}
+
+@media(min-width: 768px){
+    body{
+        display: grid;
+        place-items: center;
+    }
+
+    main{
+        padding: 20px 32px 32px;
+        max-inline-size: none;
+        inline-size: 615px; /* 80vw for 768px OR 80% of 768px */
+        font-size: 1.1rem;
+    }
+
+    h1{
+        font-size: clamp(1.25rem, 4.5vw, 2rem);
+    }
+
+    .desktop-view-wrapper{
+        display: flex;
+        justify-content: space-between;
+        gap: 12px;
+    }
+
+    .desktop-view-wrapper > *{
+        inline-size: 48%;
+    }
+
+    .desktop-view-wrapper .box-style:first-of-type{
+        margin: 0;
+    }
+
+    .tall{
+        block-size: 18vh; 
+    }
+
+    textarea{
+        block-size: 65%;
+    }
+}
+
+@media (min-width: 900px){
+    main{
+        inline-size: 720px; /* 80vw for 900px OR 80% of 900px*/
+    }
+}
+
+@media (min-width: 1200px){
+    main{
+        inline-size: 720px;
+        padding: 30px 40px 40px;
+    }
+}
+
+@media (any-pointer: fine){
+    input:not([type="radio"], [type="checkbox"]):hover, textarea:hover{
+        border-color: var(--green-600);
+    }
+
+    button:hover{
+        background-color: var(--green-900);
+    }
+
+    div.box-style:hover, input:not([type="radio"]):hover, textarea:hover, .flex-wrapper > *, button:hover{
+        cursor: pointer;
+    }
+}

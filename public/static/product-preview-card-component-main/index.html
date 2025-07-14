@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+  <link rel="stylesheet" href="style.css">
+  
+  <title>Frontend Mentor | Product preview card component</title>
+
+</head>
+<body>
+  <main>
+    <article>
+      <!-- <div class="img"> -->
+        <picture>
+          <source srcset="./assets/images/image-product-desktop.jpg" media="(min-width: 801px)">
+          <img src="./assets/images/image-product-mobile.jpg" alt="">
+        </picture>
+      <!-- </div> -->
+      <div class="content">
+        <h1>Gabrielle Essence Eau De Parfum</h1>
+        <p>Perfume</p>
+        <p>
+          A floral, solar and voluptuous interpretation composed by Olivier Polge, Perfumer-Creator for the House of CHANEL.
+        </p>
+        <p>
+          <span class="discounted-price">$149.99</span>
+          <span class="original-price">$169.99</span>
+        </p>
+        <form>
+          <button><span class="cart-icon"><img src="./assets/images/icon-cart.svg" alt=""></span><span class="btn-label">Add to Cart</span></button>
+        </form>
+      </div>
+    </article>
+    <div class="attribution">
+      Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
+      Coded by <a href="https://www.frontendmentor.io/profile/manav-sharma69">Manav</a>.
+    </div>
+  </main>
+  <script>
+    document.querySelector('form').addEventListener('submit', (e) => e.preventDefault());
+  </script>
+</body>
+</html>
+
+<!-- 
+  320px — 480px: Mobile devices
+481px — 768px: iPads, Tablets
+769px — 1024px: Small screens, laptops
+1025px — 1200px: Desktops, large screens
+1201px and more —  Extra large screens, TV
+ -->

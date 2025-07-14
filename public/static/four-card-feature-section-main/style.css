@@ -1,0 +1,248 @@
+/* CSS RESET */
+html, body, div, span, h1, h2, img, ul, li, article, footer, hgroup, p{
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, footer, hgroup{
+	display: block;
+}
+body {
+	line-height: 1;
+}
+ul {
+	list-style: none;
+}
+
+/* COLORS / THEMING */
+:root{
+    /* Primary */
+    --red: hsl(0, 78%, 62%);
+    --cyan: hsl(180, 62%, 55%);
+    --orange: hsl(34, 97%, 64%);
+    --blue: hsl(212, 86%, 64%);
+
+    /* Neutral */
+    --very-dark-blue: hsl(234, 12%, 34%);
+    --grayish-blue: hsl(229, 6%, 66%);
+    --very-light-gray: hsl(0, 0%, 98%);
+}
+
+body{
+    background-color: var(--very-light-gray);
+}
+
+article{
+    color: var(--grayish-blue);
+}
+
+h1, .bold-text{
+    color: var(--very-dark-blue);
+}
+
+li{
+    border-top: 4px solid var(--cyan);
+    border-radius: 5px;
+    background-color: white;
+    box-shadow: 0px 10px 15px 2px rgba(0,0,0,0.1);
+}
+
+.card-2{
+    border-top-color: var(--red);
+}
+
+.card-3{
+    border-top-color: var(--orange);
+}
+
+.card-4{
+    border-top-color: var(--blue);
+}
+
+.attribution a { color: hsl(228, 45%, 44%); }
+
+/* TYPOGRAPHY */
+html{
+    font-size: 15px;
+    font-family: Poppins;
+    font-weight: 400;
+}
+
+h1{
+    font-size: 1.65rem;
+    font-weight: 200;
+    line-height: 1.25;
+}
+
+p{
+    line-height: 1.75;
+}
+
+.bold-text{
+    font-weight: 600;
+}
+
+h2{
+    font-size: 1.3rem;
+}
+
+li > p{
+    font-size: .8rem;
+}
+
+.attribution { font-size: 11px; text-align: center; font-weight: 200;}
+
+/* LAYOUT */
+
+body, main{
+    display: grid;
+    place-items: center;
+}
+
+body{
+    min-block-size: 100vh;
+}
+
+article{
+    max-inline-size: 398.4px;
+    inline-size: 83vw;
+}
+
+h1{
+    display: flex;
+    flex-direction: column;
+    margin-block-end: 1.75rem;
+}
+
+h1, hgroup p{
+    text-align: center;
+}
+
+ul{
+    margin-block-start: 4rem;
+}
+
+li{
+    padding: 1.8rem 1.75rem;
+    margin-block-end: 1.5rem;
+}
+
+h2{
+    margin-block-end: .75rem;
+}
+
+li p{
+    margin-block-end: 2.25rem;
+}
+
+.container-img{
+    display: flex;
+    justify-content: flex-end;
+}
+
+img{
+    inline-size: 4.1rem;
+}
+
+/* MEDIA QUERIES */
+
+@media (min-width: 320px) and (max-width: 374.99px){
+    article{
+        inline-size: unset;
+    }
+    h1{
+        font-size: calc(1vw + 1.25rem);
+    }
+    .attribution{
+        margin-block-end: 1rem;
+    }
+}
+
+@media (min-width: 768px) and (max-width: 1000px){
+    li{
+        display: grid;
+        padding: 1rem 3vw;
+        text-align: center;
+    }
+
+    li p{
+        margin: 0;
+    }
+
+    .container-img{
+        order: -1;
+        justify-self: center;
+        margin-block-end: 1rem;
+    }
+}
+
+@media (min-width: 768px){
+    article{
+        max-inline-size: none;
+        display: grid;
+        margin: 1rem;
+    }
+
+    h1{
+        font-size: 2.4rem;
+        line-height: 1.5;
+    }
+
+    hgroup p{
+        line-height: 1.5;
+        margin: 0 auto;
+        text-align: center;
+        inline-size: 40vw;
+        max-inline-size: 500px;
+    }
+    
+    ul{
+        max-inline-size: 1110px;
+        justify-self: center;
+        display: grid;
+        align-items: center;
+        grid-template-columns: repeat(3, 1fr);
+        grid-template-rows: 1fr 1fr;
+        gap: 1.5rem;
+    }
+
+    li{
+        margin: 0;
+        padding: 2rem ;
+    }
+
+    li p{
+        max-inline-size: 90%;
+    }
+
+    .card-3{
+        order: 4;
+        grid-column-start: 2;
+        grid-column-end: 3;
+    }
+
+    .card-4{
+        order: 3;
+        grid-column-start: 3;
+        grid-column-end: 4;
+    }
+
+    .card-1, .card-4{
+        grid-row-start: 1;
+        grid-row-end: 3;
+    }
+}
+
+@media (max-height: 922px){
+    article, ul{
+        margin-block-start: 1.5rem;
+    }
+
+    h1{
+        line-height: 1.5;
+    }
+}

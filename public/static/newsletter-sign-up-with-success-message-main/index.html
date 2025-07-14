@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+
+    <link rel="icon" type="image/png" sizes="32x32" href="./assets/images/favicon-32x32.png">
+
+    <title>Frontend Mentor | Newsletter sign-up form with success message</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <main>
+        <article>
+            <picture>
+                <source srcset="./assets/images/illustration-sign-up-desktop.svg" media="(min-width: 801px)">
+                <img src="./assets/images/illustration-sign-up-mobile.svg" alt="Decorative hero image" aria-hidden="true">
+            </picture>
+
+            <div class="padded-box">
+                <h1>Stay updated!</h1>
+                <p>
+                    Join 60,000+ product managers receiving monthly updates on:
+                </p>
+                <ul>
+                    <li><span class="li-wrapper">Product discovery and building what matters</span></li>
+                    <li><span class="li-wrapper">Measuring to ensure updates are a success</span></li>
+                    <li><span class="li-wrapper">And much more!</span></li>
+                </ul>
+                <form name="Sign-Up Form" novalidate>
+                    <fieldset>
+                        <legend><span class="title">Email address</span> <span class="error-msg">Valid email required</span></legend>
+                        <input type="email" name="email" id="email" placeholder="email@company.com" autocomplete="off">
+                    </fieldset>
+                    <div class="wrapper">
+                        <button type="submit" >Subscribe to monthly newsletter</button>
+                    </div>
+                </form>
+            </div>
+
+            <dialog>
+                <div class="dialog-wrapper">
+                    <hgroup>
+                        <h2>Thanks for subscribing!</h2>
+                    <p>A confirmation email has been sent to <strong class="bold"></strong>. Please open it and click the button inside to confirm your subscription.</p>
+                    </hgroup>
+                    <form method="dialog">
+                        <div class="wrapper"><button class="dismiss-btn">Dismiss message</button></div>
+                    </form>
+                </div>
+            </dialog>
+        </article>
+        <div class="attribution">
+        Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
+        Coded by <a href="https://www.frontendmentor.io/profile/manav-sharma69">Manav</a>.
+        </div>
+    </main>
+
+    <script src="app.js"></script>
+</body>
+</html>

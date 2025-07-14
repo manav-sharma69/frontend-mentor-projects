@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="icon" type="image/png" sizes="32x32" href="./assets/images/favicon-32x32.png">
+    
+    <title>Frontend Mentor | Results summary component</title>
+    
+    <link rel="stylesheet" href="style.css">
+</head>
+    <body>
+        <main>
+
+            <article>
+                <div class="score-card">
+                    <h1>Your Result</h1>
+                    <p class="final-score"><span class="score color-white">76</span><span class="total-score">of 100</span></p>
+                    <p class="color-white compliment">Great</p>
+                    <p class="performance-desc">You scored higher than 65% of the people who have taken these tests.</p>
+                </div>
+
+                <div class="detailed-card">
+                    <h2>Summary</h2>
+                    
+                    <ul>
+                        <li>
+                            <span class="category-reaction">Reaction</span>
+                            <span class="category-score"><span class="score-obtained">80</span> / 100</span>
+                        </li>
+                        <li>
+                            <span class="category-memory">Memory</span>
+                            <span class="category-score"><span class="score-obtained">92</span> / 100</span>
+                        </li>
+                        <li>
+                            <span class="category-verbal">Verbal</span>
+                            <span class="category-score"><span class="score-obtained">61</span> / 100</span>
+                        </li>
+                        <li>
+                            <span class="category-visual">Visual</span>
+                            <span class="category-score"><span class="score-obtained">72</span> / 100</span>
+                        </li>
+                    </ul>
+                    
+                    <form>
+                        <button>Continue</button>
+                    </form>
+                </div>
+            </article>
+
+            <div class="attribution">
+                Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
+                Coded by <a href="https://www.frontendmentor.io/profile/manav-sharma69">Manav</a>.
+            </div>
+        </main>
+        
+
+        <script>
+            document.querySelector('form').addEventListener('submit', (e) => e.preventDefault());
+        </script>
+    </body>
+</html>

@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="icon" type="image/png" sizes="32x32" href="./assets/images/favicon-32x32.png">
+    
+    <title>Frontend Mentor | Age calculator app</title>
+
+    <link rel="stylesheet" href="varsAndFonts.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <main>
+        <article>
+            <form>
+                <div class="label-wrapper">
+                    <label>
+                        <span class="label">day</span>
+                        <input type="number" name="day" placeholder="DD" id="day">
+                        <div class="msg"></div>
+                    </label>
+                    <label>
+                        <span class="label">month</span>
+                        <input type="number" name="month" placeholder="MM" id="month">
+                        <div class="msg"></div>
+                    </label>
+                    <label>
+                        <span class="label">year</span>
+                        <input type="number" name="year" placeholder="YYYY" id="year">
+                        <div class="msg"></div>
+                    </label>
+                </div>
+                <div class="wrapper">
+                    <hr>
+                    <button>
+                        <img src="./assets/images/icon-arrow.svg" alt="Submit">
+                    </button>
+                </div>
+            </form>
+
+            <ul class="calculated-age" aria-label="Calculated Age">
+                <li class="years"><span class="num">--</span><span class="text"> years</span></li>
+                <li class="months"><span class="num">--</span><span class="text"> months</span></li>
+                <li class="days"><span class="num">--</span><span class="text"> days</span></li>
+            </ul>
+        </article>
+
+        <aside class="attribution">
+            Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
+            Coded by <a href="https://www.frontendmentor.io/profile/manav-sharma69">Manav</a>.
+        </aside>
+    </main>
+    
+    <script src="app.js"></script>
+</body>
+</html>

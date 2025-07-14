@@ -1,0 +1,325 @@
+/* RESET */
+*, *::before, *::after {
+    box-sizing: border-box;
+}
+
+* {
+    margin: 0;
+}
+
+body {
+    line-height: 1.5;
+    -webkit-font-smoothing: antialiased;
+}
+
+img, picture, video, canvas, svg {
+    display: block;
+    max-width: 100%;
+}
+
+input, button, textarea, select {
+    font: inherit;
+}
+
+p, h1, h2, h3, h4, h5, h6 {
+    overflow-wrap: break-word;
+}
+
+#root, #__next {
+    isolation: isolate;
+}
+
+/* COLORS / THEMING */
+:root{
+    /* Primary */
+    --red: hsl(0, 100%, 74%);
+    --green: hsl(154, 59%, 51%);
+    --green-hover: hsl(154, 59%, 65%);
+    --green-drop-shadow: hsl(154, 59%, 40%);
+
+    /* Accent */
+    --blue: hsl(248, 32%, 49%);
+
+    /* Neutral */
+    --dark-blue: hsl(249, 10%, 26%); 
+    --grayish-blue: hsl(246, 25%, 77%);
+}
+
+body{
+    background: url('./images/bg-intro-mobile.png') var(--red);
+    background-position-x: center;
+    color: white;
+}
+
+.section-two > p, .form-wrapper{
+    border-radius: 10px;
+    filter: drop-shadow(0px 10px rgba(0,0,0,0.1));
+}
+
+.section-two > p{
+    background-color: var(--blue);
+}
+
+.form-wrapper{
+    background-color: white;
+}
+
+input, button{
+    border-radius: 6px;
+}
+
+input{
+    color: var(--dark-blue);
+    border: 1px solid var(--grayish-blue);
+    caret-color: var(--dark-blue);
+}
+
+input::placeholder{
+    color: var(--dark-blue);
+}
+
+input:focus-visible{
+    outline: 1px solid var(--dark-blue);
+    border: none;
+}
+
+.mis-input{
+    border: 2px solid var(--red);
+    color: red;
+}
+
+.mis-input:focus, .mis-input:focus-visible{
+    color: var(--dark-blue);
+    outline: 1px solid var(--dark-blue);
+}
+
+button{
+    background-color: var(--green);
+    color: white;
+    border: none;
+    filter: drop-shadow(0px 3px var(--green-drop-shadow));
+}
+
+.form-wrapper p{
+    color: var(--grayish-blue);
+}
+
+.error{
+    color: var(--red);
+}
+
+.t-and-s{
+    color: var(--red);
+}
+
+.attribution a { color: hsl(228, 45%, 44%); }
+
+/* TYPOGRAPHY | 400, 500, 600, 700 | 16px */
+html{
+    font-family: Poppins, sans-serif;
+    text-align: center;
+}
+
+h1{
+    font-size: 1.6rem;
+    line-height: 1.2;
+}
+
+strong{
+    font-weight: 600;
+}
+
+input::placeholder, input{
+    font-size: 14px;
+    font-weight: 700;
+}
+
+.error{
+    text-align: end;
+}
+
+button{
+    text-transform: uppercase;
+    letter-spacing: .5px;
+}
+
+.error{
+    font-size: .6rem;
+}
+
+.form-wrapper > p{
+    font-size: 11px;
+    line-height: 2;
+}
+
+.t-and-s{
+    text-decoration: none;
+    font-weight: 600;
+}
+
+.attribution { font-size: 11px; text-align: center; }
+
+/* LAYOUT */
+
+body{
+    display: grid;
+    place-items: center;
+    min-block-size: 100vh;
+    padding-block: 72px 24px;
+}
+
+main{
+    max-inline-size: 480px;
+}
+
+article{
+    margin: 0 24px 16px;
+}
+
+.section-one{
+    margin-block-end: 48px;
+}
+
+h1{
+    padding-inline: 12px;
+    margin-block-end: 24px;
+}
+
+.section-two > p{
+    padding: 16px 72px;
+    margin-block-end: 24px;
+}
+
+.form-wrapper{
+    padding: 24px;
+}
+
+form > *{
+    margin-block-end: 15.5px;
+}
+
+label{
+    position: relative;
+    display: flex;
+    flex-direction: column;
+}
+
+.error-img{
+    align-self: flex-end;
+    position: absolute;
+    top: 16px;
+    right: 24px;
+}
+
+input, button{
+    inline-size: 100%;
+    padding: 16px;
+}
+
+input{
+    margin-block-end: 4px;
+}
+
+button{
+    margin-block-end: 16px;
+}
+
+.error{
+    display: block;
+}
+
+.hidden{
+    display: none;
+}
+
+.screen-reader {
+	border: 0;
+	clip-path: rect(0 0 0 0);
+	block-size: 1px;
+	margin: -1px;
+	overflow: hidden;
+	padding: 0;
+	position: absolute;
+	white-space: nowrap;
+	inline-size: 1px;
+}
+
+.form-wrapper > p{
+    padding-inline: 16px;
+}
+
+/* MEDIA QUERIES */
+
+@media (max-width: 373px){
+    article{
+        margin: 8px;
+    }
+
+    .section-two > p{
+        padding-inline: calc((100vw - 189px)/2);
+    }
+}
+
+@media (min-width: 640px){
+    main{
+        max-inline-size: 75%;
+    }
+}
+
+@media (min-width: 740px){
+    main{
+        max-inline-size: 555px;
+    }
+}
+
+@media (min-width: 900px){
+    body{
+        background-image: url("./images/bg-intro-desktop.png");
+    }
+
+    main{
+        max-inline-size: none;
+    }
+
+    article{
+        display: grid;
+        align-items: center;
+        grid-template-columns: 1fr 1fr;
+        gap: 2rem;
+    }
+
+    .section-one{
+        margin-block-end: 0;
+        text-align: start;
+    }
+
+    h1{
+        padding: 0;
+        font-size: clamp(2.5rem, 3.5vw, 3.5rem);
+    }
+
+    .section-two{
+        max-inline-size: 95%;
+    }
+
+    .form-wrapper{
+        padding: 36px;
+    }
+
+    input{
+        padding-inline: 32px;
+    }
+}
+
+@media (min-width: 1080px){
+    main{
+        max-inline-size: 1200px;
+    }
+}
+
+@media (any-pointer: fine){
+    button:hover{
+        cursor: pointer;
+        background-color: var(--green-hover);
+    }
+}

@@ -1,36 +1,36 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# A Collection of [Frontend Mentor's Projects](https://www.frontendmentor.io/challenges?hideCompleted=true&type=free%2Cfree-plus) Made by [Manav](https://github.com/manav-sharma69)
 
-## Getting Started
+Thanks for visiting!<br/>
+Have a nice day ❤️
 
-First, run the development server:
-
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
-
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
-
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
-
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
-
-## Learn More
-
-To learn more about Next.js, take a look at the following resources:
-
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
-
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+<main>
+  <h2>Projects in chronological order</h2>
+  <ol>
+    <li><a href="./qr-code-component/index.html">QR Code Component</a></li>
+    <li><a href="./blog-preview-card-main/index.html">Blog Preview Card</a></li>
+    <li><a href="./recipe-page-main/index.html">Recipe Page</a></li>
+    <li><a href="./social-links-profile-main/index.html">Social Links Profile</a></li>
+    <li><a href="./faq-accordion-main/index.html">FAQs Accordion</a></li>
+    <li><a href="./newsletter-sign-up-with-success-message-main/index.html">Newsletter Sign Up with success message</a></li>
+    <li><a href="./results-summary-component-main/index.html">Results Summary Component</a></li>
+    <li><a href="./product-preview-card-component-main/index.html">Product Preview Card Component</a></li>
+    <li><a href="./interactive-rating-component-main/index.html">Interactive Rating Component</a></li>
+    <li><a href="./nft-preview-card-component-main/index.html">NFT Preview Card Component</a></li>
+    <li><a href="./order-summary-component-main/index.html">Order Summary Card Component</a></li>
+    <li><a href="./stats-preview-card-component-main/index.html">Stats Preview Card Component</a></li>
+    <li><a href="./3-column-preview-card-component-main/index.html">3 Column Preview Card Component</a></li>
+    <li><a href="./age-calculator-app-main/index.html">Age Calculator App</a></li>
+    <li><a href="./profile-card-component-main/index.html">Profile Card Component</a></li>
+    <li><a href="./social-proof-section-main/index.html">Social Proof Section</a></li>
+    <li><a href="./article-preview-component-main/index.html">Article Preview Component</a></li>
+    <li><a href="./four-card-feature-section-main/index.html">Four Card Feature Section</a></li>
+    <li><a href="./base-apparel-coming-soon-main/index.html">Base Apparel Coming Soon</a></li>
+    <li><a href="./intro-component-with-signup-form-main/index.html">Intro Component With Signup Form</a></li>
+    <li><a href="./single-price-grid-component-main/index.html">Single Price Grid Component</a></li>
+    <li><a href="./ping-coming-soon-page-main/index.html">Ping Coming Soon Page</a></li>
+    <li><a href="./huddle-landing-page-with-single-introductory-section-main/index.html">Huddle Landing Page (Introductory Section)</a></li>
+    <li><a href="./news-homepage-main/index.html">News Homepage</a></li>
+    <li><a href="./contact-form-main/index.html">Contact Form</a></li>
+    <li><a href="./testimonials-grid-section-main/index.html">Testimonials Grid Section</a></li>
+  </ol>
+</main>

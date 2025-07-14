@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="icon" type="image/png" sizes="32x32" href="./assets/images/favicon-32x32.png">
+    <link rel="stylesheet" href="style.css">
+    
+    <title>Frontend Mentor | Contact form</title>
+</head>
+<body>
+    <div class="generic-wrapper">
+        <main>
+            <h1>Contact Us</h1>
+    
+            <span class="visually-hidden" tabindex="0">All fields are required.</span>
+    
+            <form novalidate>
+                <div class="desktop-view-wrapper">
+                    <div class="input-wrapper">
+                        <label for="fName">First Name <span class="required-asterisk" aria-hidden="true">*</span></label>
+                        <input type="text" name="fName" id="fName" class="box-style">
+                        <label class="error-screen-reader" for="fName"></label>
+                        <span class="error" aria-hidden="true"></span>
+                    </div>
+        
+                    <div class="input-wrapper">
+                        <label for="lName">Last Name <span class="required-asterisk" aria-hidden="true">*</span></label>
+                        <input type="text" name="lName" id="lName" class="box-style">
+                        <label class="error-screen-reader" for="lName"></label>
+                        <span class="error" aria-hidden="true"></span>
+                    </div>
+                </div>
+    
+                <div class="input-wrapper">
+                    <label for="email">Email Address <span class="required-asterisk" aria-hidden="true">*</span></label>
+                    <input type="email" name="email" id="email" class="box-style">
+                    <label class="error-screen-reader" for="email"></label>
+                    <span class="error" aria-hidden="true"></span>
+                </div>
+    
+                <fieldset class="input-wrapper">
+                    <legend>Query Type <span class="required-asterisk" aria-hidden="true">*</span></legend>
+    
+                    <div class="desktop-view-wrapper">
+                        <div class="box-style">
+                            <input type="radio" name="queryType" id="general-enq" value="general-enq">
+                            <label for="general-enq">General Enquiry</label>
+                        </div>
+                        <div class="box-style">
+                            <input type="radio" name="queryType" id="support-req" value="support-req">
+                            <label for="support-req">Support Request</label>
+                        </div>
+                    </div>
+    
+                    <label class="error-screen-reader" for="general-enq"></label>
+                    <span class="error" aria-hidden="true"></span>
+                </fieldset>
+    
+                <div class="input-wrapper tall">
+                    <label for="msg">Message <span class="required-asterisk" aria-hidden="true">*</span></label>
+                    <textarea name="msg" id="msg" class="box-style"></textarea>
+                    <label class="error-screen-reader" for="msg"></label>
+                    <span class="error" aria-hidden="true"></span>
+                </div>
+    
+                <div class="input-wrapper checkbox-parent">
+                    <div class="flex-wrapper">
+                        <input type="checkbox" name="consentCheckbox" id="consentCheckbox" value="contact-agreed" class="box-style">
+                        <label for="consentCheckbox">
+                            I consent to being contacted by the team <span class="required-asterisk" aria-hidden="true">*</span>
+                        </label>
+                    </div>
+                    <label class="error-screen-reader" for="consentCheckbox"></label>
+                    <span class="error" aria-hidden="true"></span>
+                </div>
+    
+                <button>Submit</button>
+            </form>
+        </main>
+    
+        <span class="flash-msg" role="alert">
+            <p class="heading">Message Sent!</p>
+            <p>Thanks for completing the form. We'll be in touch soon!</p>
+        </span>
+      
+        <footer class="attribution">
+            Challenge by <a href="https://www.frontendmentor.io?ref=challenge">Frontend Mentor</a>. 
+            Coded by <a href="https://www.frontendmentor.io/profile/manav-sharma69">Manav</a>.
+        </footer>
+    </div>
+
+    <script src="app.js"></script>
+</body>
+</html>

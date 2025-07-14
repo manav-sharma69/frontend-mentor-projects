@@ -1,0 +1,180 @@
+/* COLORS / THEMEING */
+:root{
+    /* Primary */
+    --bright-orange: hsl(31, 77%, 52%);
+    --dark-cyan: hsl(184, 100%, 22%);
+    --very-dark-cyan: hsl(179, 100%, 13%);
+
+    /* Neutral */
+    --transparent-white-paragraphs: hsla(0, 0%, 100%, 0.75);
+    --very-light-gray-background-headings-buttons: hsl(0, 0%, 95%);
+}
+
+body, button{
+    background-color: var(--very-light-gray-background-headings-buttons);
+    color: var(--transparent-white-paragraphs);
+}
+
+.sedan{
+    background-color: var(--bright-orange);
+}
+
+.sedan > button{
+    color: var(--bright-orange);
+}
+
+.suv{
+    background-color: var(--dark-cyan);
+}
+
+.suv > button{
+    color: var(--dark-cyan);
+}
+
+.luxury{
+    background-color: var(--very-dark-cyan);
+}
+
+.luxury > button{
+    color: var(--very-dark-cyan);
+}
+
+h1{
+    color: var(--very-light-gray-background-headings-buttons);
+}
+
+button{
+    border: none;
+    outline: none;
+    border-radius: 50px;
+}
+.attribution {color: black;}
+.attribution a { color: hsl(228, 45%, 44%); }
+
+/* TYPOGRAPHY body - 15px |wghts - LD: 400; BSD: 700*/
+
+body, button{
+    font-size: 15px;
+    font-family: 'Lexend Deca';
+}
+
+h1{
+    font-family: 'Big Shoulders Display';
+    text-transform: uppercase;
+    font-size: 2.5rem;
+}
+
+p{
+    line-height: 1.75;
+    text-align: start;
+}
+
+.attribution { font-size: 11px; text-align: center; }
+
+/* LAYOUT */
+body{
+    margin: 0;
+    display: grid;
+    place-items: center;
+    min-block-size: 100vh;
+}
+
+.col{
+    padding: 2.75rem 2.75rem;
+}
+
+.col > * {
+    margin: 0;
+    margin-block-end: 1.5rem;
+}
+
+.btn{
+    display: block;
+    margin: 0;
+    padding: 1rem 2rem;
+}
+
+aside{
+    display: none;
+}
+
+/* MEDIA QUERIES */
+
+@media (min-width: 375px){
+    main{
+        max-inline-size: 30rem;
+    }
+
+    article{
+        margin: 1rem 1.5rem;
+    }
+
+    .sedan{
+        border-radius: 10px 10px 0 0;
+    }
+
+    .luxury{
+        border-radius: 0 0 10px 10px;
+    }
+}
+
+@media (min-width: 793px){
+    main{
+        max-inline-size: none;
+    }
+
+    article{
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        grid-template-rows: 65vh;
+    }
+
+    .col{
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+    }
+
+    .sedan{
+        border-radius: 10px 0 0 10px;
+    }
+
+    .luxury{
+        border-radius: 0 10px 10px 0;
+    }
+
+    .col > * {
+        max-inline-size: 90%;
+    }
+
+    .btn{
+        padding-inline: 0;
+        max-inline-size: 70%;
+    }
+}
+
+@media (min-width: 1131px){
+    main{
+        max-inline-size: 70%;
+    }
+}
+
+@media (any-pointer: fine){
+    button:hover{
+        outline: 2px solid var(--very-light-gray-background-headings-buttons);
+        color: var(--very-light-gray-background-headings-buttons);
+        cursor: pointer;
+    }
+
+    .sedan button:hover{
+        background-color: var(--bright-orange);
+    }
+
+    .suv button:hover{
+        background-color: var(--dark-cyan);
+    }
+
+    .luxury button:hover{
+        background-color: var(--very-dark-cyan);
+    }
+}

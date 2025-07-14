@@ -1,0 +1,232 @@
+/* COLOR/THEMEING */
+
+.attribution a { color: hsl(228, 45%, 44%); }
+
+body{
+    background-color: var(--off-white);
+}
+
+article{
+    background-color: var(--white);
+    border-radius: 30px 30px 100px 30px;
+}
+
+.label{
+    color: var(--smoker-grey);
+}
+
+input{
+    border: none;
+    outline: 2px solid var(--light-grey);
+    border-radius: 4px;
+    caret-color: var(--purple);
+}
+
+input:focus, input:active{
+    outline: 1px solid var(--purple);
+}
+
+input.error{
+    color: var(--off-black);
+    outline-color: var(--light-red);
+}
+
+.error{
+    color: var(--light-red);
+}
+
+hr{
+    border-color: var(--light-grey);
+}
+
+button{
+    background-color: var(--purple);
+    border: none;
+    outline: none;
+    border-radius: 50%;
+}
+
+button:active{
+    background-color: var(--off-black);
+}
+
+.num{
+    color: var(--purple);
+}
+
+.text{
+    color: var(--off-black);
+}
+/* TYPOGRAPHY */ /* 400i, 700, 800i*/
+
+
+.attribution { font-size: 11px; text-align: center; }
+
+body{
+    font-family: Poppins;
+}
+
+span.label{
+    font-family: 'Poppins Extra Bold';
+    text-transform: uppercase;
+    letter-spacing: .15rem;
+    font-size: .8rem;
+}
+
+input{
+    font-size: 1.5rem;
+    font-family: 'Poppins Extra Bold';
+}
+
+.msg{
+    font-size: .6rem;
+    font-style: italic;
+}
+
+li{
+    font-family: 'Poppins Extra Bold Italic';
+    font-size: clamp(2.8rem, (10vw + .2rem), 3rem);
+    letter-spacing: -0.1rem;
+    line-height: 1;
+}
+
+/* LAYOUT */
+body{
+    min-block-size: 100vh;
+    margin: 0;
+    display: grid;
+    place-items: center;
+}
+
+article{
+    max-inline-size: calc(24rem - 1.5rem);
+    padding: 3rem 1.75rem 2.5rem;
+    margin: 1rem;
+}
+
+.label-wrapper{
+    inline-size: 100%;
+    display: flex;
+    gap: 1rem;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+input, span.label{
+    display: block;
+}
+
+input{
+    padding: .5rem .5rem .5rem 1rem;
+    inline-size: calc(100% - 1.5rem);
+    -moz-appearance: textfield;
+    appearance: textfield;
+    margin: .5rem 0rem .5rem;
+}
+
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    margin: 0; 
+}
+
+.msg{
+    /* outline: 1px solid black; */
+    inline-size: 100%;
+    min-height: 1rem;
+    /* margin-block-end: .5rem; */
+}
+
+.wrapper{
+    inline-size: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 3rem 0;
+}
+
+hr{
+    margin: 0;
+    inline-size: 100%;
+}
+
+button{
+    position: absolute;
+    padding: 1rem;
+}
+
+img{
+    inline-size: 2rem;
+}
+
+ul{
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+/* MEDIA QUERIES */
+
+@media (min-width: 1025px){
+    main{
+        inline-size: 50vw;
+    }
+
+    article{
+        max-inline-size: none;
+        padding-inline: 3rem;
+    }
+
+    .label-wrapper{
+        justify-content: flex-start;
+        gap: 3rem;
+    }
+
+    .label-wrapper, .calculated-age{
+        max-inline-size: 75%;
+    }
+
+    .wrapper{
+        margin: 0rem 0rem;
+    }
+
+    input{
+        inline-size: 100%;
+    }
+
+    hr{
+        inline-size: 90%;
+    }
+
+    button{
+        position: static;
+        padding: 2rem;
+    }
+
+    li{
+        font-size: clamp(2.8rem, (4vw + .2rem), 5.5rem);
+    }
+
+    .num{
+        letter-spacing: .75rem;
+    }
+}
+
+@media (min-width: 320px) and (max-width: 375px){
+    article{
+        margin: 0;
+    }
+}
+
+@media (any-pointer: fine){
+    button:hover{
+        cursor: pointer;
+        background-color: var(--off-black);
+    }
+
+    input{
+        cursor: pointer;
+    }
+}
